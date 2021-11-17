@@ -94,3 +94,28 @@ private long calculateFibonacciLogN(long n) {
 ```
 
 The code can be found in java/Fibonacci.java. 
+
+The answer that I deem correct would be the iterated one as this will support numbers up to 80. 
+
+Thus that will be the answer I submit. 
+
+### Final answer
+```java
+private int calculateFibonacci(int n) {
+	if (n <= -1) {
+		throw new IllegalArgumentException("Invalid");
+	}
+	if (n <= 1){
+		return n;
+	}
+	int ptr = 0;
+	int minusOne = 1;
+	int minusTwo = 0;
+	for (int i = 2; i <= n; i ++) {
+		ptr = minusOne + minusTwo;
+		minusTwo = minusOne
+		minusOne = ptr;
+	}
+	return value;
+}
+```

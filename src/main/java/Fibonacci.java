@@ -5,8 +5,8 @@ public class Fibonacci {
     public static void main(String[] args) {
         Fibonacci invoker = new Fibonacci();
         System.out.println(invoker.calculateFibonacciLogN(50));
-        System.out.println(invoker.calculateFibonacciMemo(50, new HashMap<>()));
-        System.out.println(invoker.calculateFibonacciIterative(50));
+        System.out.println(invoker.calculateFibonacciMemo(80, new HashMap<>()));
+        System.out.println(invoker.calculateFibonacciIterative(80)); // <- answer I would submit.
         System.out.println(invoker.calculateFibonacciWorstRunTime(20));
     }
     private long calculateFibonacciWorstRunTime(long n) {
