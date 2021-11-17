@@ -23,6 +23,7 @@ To avoid using third party libraries, I opted to skip those implementations.
 |/index.html |     GET    |Gives you an html page that says hello world.|
 |/hello-world|     GET    |Gives you a response in text/plain that simply says hello world.|
 |/nested-json|     GET    |Gives you a response in application/json|
+|/return-queries|     GET |Return the queries you gave|
 
 And that's basically it. 
 The rest will give you an error(404 or not implemented, depending on what you request).

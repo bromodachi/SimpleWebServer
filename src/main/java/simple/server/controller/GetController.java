@@ -53,6 +53,13 @@ public class GetController implements HandleRequest{
                         .setHeaders(CommonHeaders.getContentTypeHeader(ContentType.APPLICATION_JSON))
                         .setContent(MapToJson.mapToJson(Map.of("key", "value", "innerKey", Map.of("foo", "bar", "number", 2))))
                         .build();
+            case "/return-queries":
+                return new Response.Builder()
+                        .setStatusCode(StatusCode.OK)
+                        .setVersion(httpRequest.getVersion())
+                        .setHeaders(CommonHeaders.getContentTypeHeader(ContentType.APPLICATION_JSON))
+                        .setContent(MapToJson.mapToJson(httpRequest.getQueries()))
+                        .build();
         }
         return handleUnknownRequest();
     }
