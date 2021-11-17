@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Welcome to the simple webserver.</h1>
+		<p> This project is just to play around with how web servers work. For production usage, we recommend spring.</p>
+		
+		<p> We only handle <b>GET</b> requests for simplicity sakes. To handle POST requests, it requires parsing the JSON byte/string and not sure if it's really worth doing on a project that's supposed to be simple.</p>
+		
+		<p>Here are some of the requests you can do for <b>GET</b>!</p>
+		<ul>
+			<li> "/" → shows this page.</li>
+			<li> "/index.html" → brings you to another hello world page.</li>
+			<li> "/hello-world" → Gives you a response in text/plain that simply says hello world.</li>
+			<li> "/nested-json" → Gives you a response in application/json.</li>
+		</ul>
+		
+		Everything else, you will get a response that simply states "The content you're looking for is not found".
+	</body>
+</html>
