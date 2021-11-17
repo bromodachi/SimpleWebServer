@@ -1,7 +1,8 @@
 # shellcheck disable=SC2046
 
 build_all_java_classes() {
-  javac $(find . -name "*.java")
+  # filter out the tests
+  javac $(find . -name "*.java" | grep main)
 }
 
 run_main_class() {

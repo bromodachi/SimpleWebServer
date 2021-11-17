@@ -4,8 +4,11 @@
 
 A straightforward web server using Java's ServerSocket. 
 You can clone and run the program on an IDE or use the `build_and_run.sh` shell script attached.
-If you're using the shell script, the minimum requirements to get it running is `chmod +x build_and_run.sh && ./build_and_run.sh -b -r`. 
+If you're using the shell script, the minimum requirements to get it running is `chmod +x build_and_run.sh && ./build_and_run.sh -b -r`.
 A more detail configuration can be found in the help command.
+</br>
+If you're a fan of gradle, then run it using `./gradlew build && ./gradlew run --args="port 8082"`(or whatever port you  like).
+To run tests, `./gradlew test` will suffice. Note: I only added 4 test cases. Ideally, you add more than just that.
 
 ### Background
 
