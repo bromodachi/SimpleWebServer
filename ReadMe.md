@@ -12,8 +12,8 @@ To run tests, `./gradlew test` will suffice. Note: I only added 4 test cases. Id
 
 ### Background
 
-This simple server will only handle get request. 
-For anything else, we will read the requests but not process the request itself.
+This simple server will only handle get requests. 
+For everything else, we will read the requests but not process the request itself.
 You may be asking why and the reason is to keep things simple.
 I wanted to avoid parsing a byte to a JSON since there are many robust libraries that do this for you.
 To avoid using third party libraries, I opted to skip those implementations.
@@ -47,7 +47,7 @@ private int calculateFibonacci(int n) {
 }
 ```
 
-As you can tell, this will be really bad as it's basically O(2^n). We can improve this by using dynamic programming.
+As you can tell, this will produce a terrible runtime as it's basically O(2^n). We can improve this by using dynamic programming.
 
 ```java
 private int calculateFibonacci(int n, Map<Integer, Integer> map) {
@@ -64,7 +64,7 @@ private int calculateFibonacci(int n, Map<Integer, Integer> map) {
 ```
 This will give you an O(N) solution but the space will be O(N). We can still do better.
 
-A better approach would be..just using a simple for loop. This will give you O(N) but space will be O(1).
+A better approach would be...just using a simple for loop. This will give you O(N) but the space will be constant(O(1)).
 ```java
 private int calculateFibonacci(int n) {
 	if (n <= -1) {
@@ -84,7 +84,7 @@ private int calculateFibonacci(int n) {
 	return value;
 }
 ```
-This will give you an O(n) run time and use constant space thus O(1).
+This will give you an O(n) run time and constant space thus O(1).
 
 However, we can still do better. We can use math to get the fibonacci number. However, please note that it doesn't work well for large numbers(you would have to use BigDecimal).
 ```java
@@ -98,9 +98,9 @@ private long calculateFibonacciLogN(long n) {
 
 The code can be found in java/Fibonacci.java. 
 
-The answer that I deem correct would be the iterated one as this will support numbers up to 80. 
+The answer that I deem correct would be the iterated one as this will support numbers up to around 80. 
 
-Thus that will be the answer I submit. 
+Thus that will be the answer I submit as it's simple and straightforward.
 
 ### Final answer
 ```java
